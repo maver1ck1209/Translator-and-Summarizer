@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ title }}</title>
+  <style>
+    html {
+      background: linear-gradient(to bottom, #e7ddc9 50%, #34302f 50%);
+      height: 100%;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .content-box {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      margin: 50px auto;
+      max-width: 800px;
+      padding: 20px;
+      text-align: center;
+      background-color: white;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0 0 20px;
+    }
+
+    p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="content-box">
+    <h1>{{ title }}</h1>
+    <p>{{ page_content }}</p>
+  </div>
+</body>
+</html>

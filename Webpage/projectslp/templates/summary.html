@@ -1,0 +1,183 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Summary</title>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Montserrat&family=Raleway&display=swap" rel="stylesheet">
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css" rel="stylesheet" />
+
+  <!-- Static CSS Files -->
+  <link rel="stylesheet"  href="{%  static  'css/style.css'  %}">
+</head>
+
+<body>
+  <div class="container-box">
+    <div class="split left">
+      <div class="container">
+        <!--Summary-->
+        <div class="col d-flex justify-content-center">
+          <div class="flipcard mt-5">
+            <div class="flipcard-wrap">
+              <div class="card card-front">
+                <div class="card-body text-center">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_WvnLdAZwPv.json"
+                        background="transparent" speed="0.75" style="width: 100px; height: 100px;" loop autoplay>
+                      </lottie-player>
+                    </div>
+                    <div class="col-md-9" style="padding-top: 12.5px; padding-left: 30.5px;">
+                      <h4 class="pt-4 text-center">Summarizer Transformer</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card card-back">
+                <div class="card-body text-center">
+                  <h5>Summarizer</h5>
+                  <p>Transformer model trained using the news dataset by our team. <br>
+                  <a href="/summary" type="button" class="btn btn-outline-primary btn-sm">Try Now</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         <!--Translator-->
+        <div class="col d-flex justify-content-center">
+          <div class="flipcard">
+            <div class="flipcard-wrap">
+              <div class="card card-front">
+                <div class="card-body text-center">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_cmefnu1y.json"
+                        background="transparent" speed="0.75" style="width: 100px; height: 100px;" loop autoplay>
+                      </lottie-player>
+                    </div>
+                    <div class="col-md-9" style="padding-top: 12.5px; padding-left: 120.5px;">
+                      <h4 class="pt-4 text-center">Translator Model</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card card-back">
+                <div class="card-body text-center">
+                  <h5>Translator</h5>
+                  <p>The translator model uses the MBart Pretrained model for translation into regional languages <br>
+                  <a href="/translate" type="button" class="btn btn-outline-primary btn-sm">Try Now</a></p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Translator and Summarizer -->
+        <div class="col d-flex justify-content-center">
+          <div class="flipcard">
+            <div class="flipcard-wrap">
+              <div class="card card-front">
+                <div class="card-body text-center">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_fonNu0CFbZ.json"
+                        background="transparent" speed="0.75" style="width: 100px; height: 100px;" loop autoplay>
+                      </lottie-player>
+                    </div>
+                    <div class="col-md-9" style="padding-top: 12.5px;">
+                      <h4 class="pt-4 text-center">Translator and Summarizer</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card card-back">
+                <div class="card-body text-center">
+                  <h5>Translator and Summarizer</h5>
+                  <p>Translation and summarization of a large document for ease of understanding.<br>
+                  <a href="/ts" type="button" class="btn btn-outline-primary btn-sm">Try Now</a></p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       <!-- Hugging Face Summarizer -->
+        <div class="col d-flex justify-content-center">
+          <div class="flipcard">
+            <div class="flipcard-wrap">
+              <div class="card card-front">
+                <div class="card-body text-center">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_fR7ohS.json"
+                        background="transparent" speed="0.75" style="width: 100px; height: 100px;" loop autoplay>
+                      </lottie-player>
+                    </div>
+                    <div class="col-md-9" style="padding-top: 12.5px;padding-left: 20.5px;">
+                      <h4 class="pt-4 text-center"> Hugging Face Summarizer </h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card card-back">
+                <div class="card-body text-center">
+                  <h5>Hugging Face Summarizer</h5>
+                  <p>Hugging Face has a summarizer model for summarizing<br></p>
+                  <a href="/hsum" type="button" class="btn btn-outline-primary btn-sm">Try Now</a></p> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="split right">
+      <h1 class="text-center text-dark" style="font-size: 75px; margin-left: 30px; margin-bottom: 15px;">Summarizer</h1>
+      <form method="post" action="" enctype="multipart/form-data" id="upload-form" style="margin-top: 170px;">
+        {% csrf_token %}
+        <div class="form-outline mb-4" style="border: 1px solid #bdbdbd; border-radius: 0.5rem;
+        border-bottom-right-radius: 0.25rem; ">
+          <input type="text" id="input" name="input" class="form-control" />
+          <label class="form-label" for="form1Example1">Input</label>
+        </div>
+
+        <label for="sumtype">Choose Summarization type:</label>
+          <select id="sumtype" name="sumtype">
+            <option value="e">Extractive</option>
+            <option value="a">Abstractive</option>
+        </select>
+
+        <br>
+        <div id="extractiveInputs" >
+          <label for="nol">Number of lines</label>
+          <input id="nol" type="number" name="nol" default: "3">
+        </div>
+        <br>
+
+        <div class="form-outline mb-4" >
+          <p style="margin-left: 55px;">{{Result}}</p>
+        </div>
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-md" style="background-color:#b9a06d; color: white; position:absolute; left: 60px;">Submit</button>
+      </form>
+    </div>
+  </div>
+  </div>
+</body>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="{% static 'js\scripts.js' %}"></script>
+
+</html>

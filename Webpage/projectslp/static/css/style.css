@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+  box-sizing: border-box;
+}
+:root {
+  --left-bg-color: rgba(87, 84, 236, 0.7);
+  --left-btn-hover-color: rgba(87, 84, 236, 1);
+  --right-btn-hover-color: rgba(87, 84, 236, 1);
+  --right-bg-color: #fff;
+  --hover-width: 75%;
+  --other-width: 25%;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  height: 100vh;
+  overflow: auto;
+}
+select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: #555;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f7;
+  appearance: none; /* removes default select styles in some browsers */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select:focus {
+  outline: none;
+  border-color: #e4be60;
+  box-shadow: 0 0 5px rgba(248, 194, 76, 0.5);
+}
+
+h1 {
+  font-size: 4rem;
+  color: white;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-family: 'Barlow', sans-serif
+}
+form {
+  position: absolute;
+  top: 40%;
+  left: 37.5%;
+}
+
+.container-box {
+  position: relative;
+  background-color: #333;
+  height: 100%;
+  width: 100%;
+}
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: auto;
+}
+.split.left {
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.split.left::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #34302f;
+}
+.split.right {
+  right: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: url("../image/background.jpeg") 77.5% 0 no-repeat fixed;
+}
+
+.split.right::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../image/background.jpg") 77.5% 0 no-repeat fixed;
+  background-color: var(--right-bg-color);
+}
+
+.file-upload {
+  background-color: #34302f;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+    top: 30%;
+  }
+  .btn {
+    padding: 1.2rem;
+    width: 12rem;
+  }
+}
+
+/* FLIPPING CARD */
+.flipcard {
+  perspective: 1000px;
+  margin-bottom: 1rem;
+}
+.flipcard .flipcard-wrap {
+  position: relative;
+  width: 100%;
+  /* height: 100%; */
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.flipcard .card-front,
+.flipcard .card-back {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  backface-visibility: hidden;
+  transition: all 0.3s;
+}
+.flipcard .card-front {
+  z-index: 2;
+}
+.flipcard .card-front::after {
+  content: '';
+  display: block;
+  width: 0;
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+}
+.flipcard .card-back {
+  position: absolute;
+  top: 0;
+  text-align: left;
+  z-index: 1;
+  transform: rotateY(180deg);
+  overflow-y: hidden;
+}
+/* the flippy magic */
+.flipcard:hover .flipcard-wrap {
+  transform: rotateY(-180deg);
+}
+
